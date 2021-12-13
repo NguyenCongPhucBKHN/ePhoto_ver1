@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ePhoto_ver1</string>
+    <string name="camera">CAMERA</string>
+    <string name="gallery">GALLERY</string>
+</resources>

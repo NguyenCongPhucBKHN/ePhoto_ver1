@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "156276353849",
+    "project_id": "ephoto-ver1",
+    "storage_bucket": "ephoto-ver1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:156276353849:android:186d5de648cbdb5c9356e8",
+        "android_client_info": {
+          "package_name": "com.example.ephoto_ver1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "156276353849-b0ss9go7rmm9l45ml6gr7hfc9mqq113a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhswoutE5mbrLbooyBUPMKHoq4rMbfBgg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "156276353849-b0ss9go7rmm9l45ml6gr7hfc9mqq113a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
