@@ -76,10 +76,27 @@ public class MainActivity extends AppCompatActivity {
         galleryBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent gallery = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+
+
+
+                //PHUC_19/12
+                Intent gallery = new Intent(Intent.ACTION_PICK);
+//                Uri photoURI = FileProvider.getUriForFile(this,"com.example.android.provider");
+
+                gallery.putExtra(MediaStore.EXTRA_OUTPUT, "com.example.android.provider");
+
+                //Intent gallery = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                 startActivityForResult(gallery, GALLERY_REQUEST_CODE);
                 //galleryAddPic();
                 Toast.makeText(MainActivity.this, "Gallery Btn is Clickes", Toast.LENGTH_SHORT).show();
+
+//                Intent gallery =new Intent(Intent.ACTION_PICK);
+//
+//                Uri photoURI = FileProvider.getUriForFile(this,
+//                        "com.example.android.provider",
+//                        photoFile);
+//                Log.d("photoURI", "Path: "+photoURI.toString());
+//                gallery.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
             }
         });
     }
@@ -259,14 +276,6 @@ public class MainActivity extends AppCompatActivity {
 
         Bitmap bitmap = BitmapFactory.decodeFile(currentPhotoPath, bmOptions);
         selectedImage.setImageBitmap(bitmap);
-
-
-
-
-
-
-
-
         try {
             requestAPI(bitmap);
         } catch (Exception e) {
@@ -323,6 +332,7 @@ public class MainActivity extends AppCompatActivity {
         mediaScanIntent.setData(contentUri);
         this.sendBroadcast(mediaScanIntent);
     }
+
 
 }
 
